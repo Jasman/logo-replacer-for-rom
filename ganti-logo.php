@@ -5,9 +5,9 @@
  * @copyright Ihsana IT Solution 2018
  */
  
-$rom_sumber = "MBS2 T21-22-KOS-RT5370-TEN-ESPN-PBO.bin";
+$rom_sumber = "K5-MODERN-MT-2018-06-25.bin";
 $gambar_pengganti = "hasil.jpg";
-
+// outputnya hasil.bin
 
 $rom_img_header = array('ff',  'd8', 'ff' ,'e0');
 //$rom_img_header = array('ff',  'd8', 'ff' ,'e1');
@@ -78,6 +78,7 @@ $binner = file_get_contents('tmp/rom0.bin');
 $binner .= file_get_contents('tmp/rom1.bin');
 $binner .= file_get_contents('tmp/rom2.bin');
 file_put_contents("hasil.bin", $binner);
+
 echo 'Ukuran Firmware Hasil: ' . filesize('hasil.bin') . '<br/>';
 echo 'Sha1 Firmware Hasil: ' . sha1_file('hasil.bin') . '<br/>';
 echo '<hr/>';
